@@ -4,7 +4,9 @@
 
 本项目基于faster-rcnn.pytorch进行修改，主要用于参加2019年未来杯挑战赛图像组比赛，比赛目标是识别超新星，比赛网址 [https://ai.futurelab.tv/](https://ai.futurelab.tv/)
 
-比赛**最终方案**：Faster R-CNN + ResNet101 + Anchor Scale(1,2,3) + 数据集(中心切割，扩充，放大)
+比赛**最终方案**：Faster R-CNN + ResNet101 + Anchor Scale(1,2,3) + 数据集(中心切割，扩充，放大) ， 
+
+最终得分：0.740527 ，西北区第三名
 
 与原项目相比主要添加了**以下改进**：
 
