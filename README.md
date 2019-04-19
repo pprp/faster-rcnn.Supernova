@@ -134,7 +134,7 @@ models
 ### 如何得到submit.csv
 
 ```
-python test_net.py --dataset pascal_voc --net res101 \
+python demo.py --dataset pascal_voc --net res101 \
                    --checksession $SESSION --checkepoch $EPOCH \
                    --checkpoint $CHECKPOINT \
                    --cuda
@@ -146,25 +146,17 @@ python test_net.py --dataset pascal_voc --net res101 \
 python test_net.py --dataset pascal_voc --net res101 \
 				    --checksession 1 --checkepoch 1 \
 				    --checkpoint 2514 \
-                    --cuda
+                                    --cuda            \
+                                    --image_dir ./images
 ```
+
+image_dir参数对应测试图像位置，之后会在demo.py同目录下生成submit.csv
 
 使用的是faster_rcnn_1_1_2514.pth权重
 
-然后运行命令:
 
-```
-cd data/VOCdevkit2007/results/VOC2007/Main
-```
+> 本代码不是最终提交代码（不包括数据处理部分）
 
-将preprocess.py文件中的`txt2csv_havestar.py`和`txt2csv_nostar.py`两个文件放到该目录下
-
-此时该目录下会出现两个文件
-
-> - comp4_det_test_havestar.txt
-> - comp4_det_test_nostar.txt
-
-此时先运行:`python txt2csv_havestar.py`然后运行`python txt2csv_nostar.py`,注意调用顺序,最终得到submit.csv
 
 ## 致谢
 
